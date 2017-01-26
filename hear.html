@@ -1,0 +1,69 @@
+<!doctype hmtl>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	#videoElement {
+	    width: 300px;
+	    height: 250px;
+	    background-color: #666;'
+	    margin:auto;
+		}
+
+	body {
+		font-family: Georgia, "Times New Roman", Times, Serif;
+		color: white;
+		background-color: black;
+		align: center;
+	}
+	.text {
+		padding-top: 50px;
+	}
+	.label {
+		display:none;
+		border: 1px solid #000;
+		height: 30px;
+		width: 290px;
+		margin-left:10px;
+	}
+	a {
+		color:white;
+	}
+	a:hover + .label {
+		display: block;
+	}
+	h1 {
+		font-size:100pt;
+	}
+	</style>
+	</head>
+<body>
+		<script>
+		 var video = document.querySelector("#videoElement");
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+		 
+		if (navigator.getUserMedia) {       
+		    navigator.getUserMedia({video: true}, handleVideo, videoError);
+		}
+		 
+		function handleVideo(stream) {
+		    video.src = window.URL.createObjectURL(stream);
+		}
+		 
+		function videoError(e) {
+		    // do something
+		}
+		</script>
+	<div class="text" align="center">
+<br><br><br><br><br>
+	<a href="file.html"><img src="record-button.gif" width="50px"></a>
+	<br><br><br><br><br><br><br>i know what you sound like when you breathe<br><br>how your breath catches
+	<br><br><br><br><br><br><br><a href="file.html"><img src="record-button.gif" width="50px"></a>
+	</div>
+</body>
+	<script>
+	</script>
+</body>
+</html>
+
